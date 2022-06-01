@@ -111,10 +111,7 @@ class Api
             return $this->getCache($key);
         }
 
-        return $this->setCache(
-            $key,
-            $this->getTransport()->request($uri, $filters) ?? []
-        );
+        return $this->getTransport()->request($uri, $filters) ?? [];
     }
 
     /**
