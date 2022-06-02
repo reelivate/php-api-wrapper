@@ -316,9 +316,9 @@ abstract class Model implements ArrayAccess, JsonSerializable
     /**
      * Convert the object into something JSON serializable.
      *
-     * @return array
+     * @return mixed
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return $this->toArray();
     }
